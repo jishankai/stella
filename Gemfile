@@ -31,7 +31,19 @@ gem 'html2slim'
 gem 'slim-rails'
 
 # Pagination
-gem "kaminari"
+gem 'kaminari'
+
+# DataBase
+gem 'redis'
+
+# Crawl
+gem 'anemone'
+
+# Documents
+# gem 'axlsx'
+
+# BH
+gem 'bh', '~> 1.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

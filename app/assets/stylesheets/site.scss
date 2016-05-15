@@ -1,6 +1,21 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-    padding-top: 70px;
+
+// body {
+//    padding-top: 70px;
+// }
+.bg {
+    background:url('http://agentace.com/images/v2/shared/bg-apt.jpg') no-repeat center fixed;
+    background-size:cover
+}
+.buyer {
+    background:url('https://d1xt9s86fx9r45.cloudfront.net/assets/v3/backgrounds/quiz-flow-large-opt.jpg') no-repeat right fixed;
+    background-size:cover;
+    height:360px
+}
+.seller {
+    background:url('https://d1xt9s86fx9r45.cloudfront.net/assets/v3/backgrounds/buyers-bg-76dc6e7e6382201b7c130317b22191fe.jpg') no-repeat left fixed;
+    background-size:cover;
+    height:360px;
 }

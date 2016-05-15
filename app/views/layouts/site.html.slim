@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title
+      | HOUSE.
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    meta name='viewport' content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  body
+    = navbar position: :static do
+      = vertical do
+        = image_tag('brand', size:'160x50')
+      = horizontal do
+        = nav class: 'navbar-left' do
+          li.dropdown
+            a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
+              | 选择城市
+              span.caret
+          ul.dropdown-menu
+            li
+              a[href="#"]
+                | 北京
+            li
+              a[href="#"]
+                | 上海
+        = nav class: 'navbar-right' do
+          = link_to '买卖/租赁', root_path
+          = link_to '经纪人', agents_path
+    = yield
+    .container#footer-container
+      footer
+        p.pull-right
+          | © 2016 北京三岔口信息技术有限公司
+        p
+          ul.list-inline
+            li 关于我们
+            li 联系我们
+            li 加入我们
+            li 隐私声明

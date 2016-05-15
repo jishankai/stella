@@ -1,0 +1,105 @@
+.container#main-container
+  .panel.panel-default
+    .panel-body
+      .row
+        ui.nav.nav-pills[style="display:inline-block"]
+          li.disabled
+            a[href="#" role="presentation"]
+              b 区域：
+          li.active
+            a[href="#" role="presentation"]
+              | 不限
+          li
+            a[href="#" role="presentation"]
+              | 东城
+          li
+            a[href="#" role="presentation"]
+              | 西城
+          li
+            a[href="#" role="presentation"]
+              | 朝阳
+          li
+            a[href="#" role="presentation"]
+              | 海淀
+          li
+            a[href="#" role="presentation"]
+              | 丰台
+          li
+            a[href="#" role="presentation"]
+              | 石景山
+          li
+            a[href="#" role="presentation"]
+              | 通州
+          li
+            a[href="#" role="presentation"]
+              | 昌平
+          li
+            a[href="#" role="presentation"]
+              | 大兴
+          li
+            a[href="#" role="presentation"]
+              | 亦庄
+          li
+            a[href="#" role="presentation"]
+              | 顺义
+          li
+            a[href="#" role="presentation"]
+              | 房山
+          li
+            a[href="#" role="presentation"]
+              | 门头沟
+          li
+            a[href="#" role="presentation"]
+              | 平谷
+          li
+            a[href="#" role="presentation"]
+              | 怀柔
+          li
+            a[href="#" role="presentation"]
+              | 密云
+          li
+            a[href="#" role="presentation"]
+              | 延庆
+          li
+            a[href="#" role="presentation"]
+              | 燕郊
+      .row
+        hr.devider
+      .row
+        ui.nav.nav-pills[style="display:inline-block"]
+          li.disabled
+            a[href="#" role="presentation"]
+              b 排序：
+          li.active
+            a[href="#" role="presentation"]
+              | 默认
+          li
+            a[href="#" role="presentation"]
+              | 按好评度排序
+          li
+            a[href="#" role="presentation"]
+              | 按成交量排序
+          li
+            a[href="#" role="presentation"]
+              | 按看房率排序
+  center.panel.panel-default
+    .panel-body
+      | 共有
+      font[color='red']
+        b = @agents.total_count
+      | 名经纪人
+      hr.devider
+      - @agents.each do |agent|
+        .row
+          .col-xs-3
+            = image_tag(agent.photo)
+          .col-xs-2
+            = agent.name
+          .col-xs-2
+            = agent.mobile
+          .col-xs-2
+            = agent.region
+          .col-xs-3
+            h1 = agent.score
+        hr.devider
+      = paginate @agents
